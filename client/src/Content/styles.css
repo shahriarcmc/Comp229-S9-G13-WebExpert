@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    padding-bottom: 80px;
+}
+tr {
+    line-height: 52px;
+    min-height: 52px;
+    height: 52px;
+ }
