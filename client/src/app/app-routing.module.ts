@@ -12,9 +12,14 @@ import { DeleteComponent } from './pages/surveys/delete/delete.component';
 import { LoginComponent } from './pages/auth/login.component';
 import { RegisterComponent } from './pages/auth/register.component';
 import { AuthGuard } from "./pages/auth/auth.guard";
+import { AboutComponent} from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, data: {title: 'Home'}},
+  {path: 'about', component: AboutComponent, data: {title: 'About Us'}},
+  {path: 'contact', component: ContactComponent, data: {title: 'Contact Us'}},
   {path: 'surveys/list', component: ListComponent, data: {title: 'Survey List'}},
   {path: 'surveys/details/:id', component: DetailsComponent, data: {title: 'Survey Contents'}},
   // add a new survey w/ title

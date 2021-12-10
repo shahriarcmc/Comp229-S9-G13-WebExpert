@@ -8,10 +8,15 @@ import { HttpClientModule} from '@angular/common/http';
 import { AuthGuard } from "./pages/auth/auth.guard";
 import { AuthModule } from "./pages/auth/auth.module";
 import { PartialsModule } from './partials/partials.module';
+import { AboutComponent} from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     AppRoutingModule,
