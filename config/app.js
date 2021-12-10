@@ -53,6 +53,7 @@ var app = express();
 
 // static path for Angular files
 app.use(express.static(path.join(__dirname, '../client/static/')));
+app.use('/images', express.static(__dirname + '/Images'));
 
 app.use(logger('dev'));
 app.use(express.json());
