@@ -1,3 +1,7 @@
+// <!-- COMP229 - Fall 2021 - - Sec 09
+// Group - 13
+// WEbExpert -->
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
@@ -21,8 +25,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {
     this.baseUrl = `https://comp229-sec9-group13-webexpert.herokuapp.com/${API_PATH}`;
-    // this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/${API_PATH}`;
-    // this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/${API_PATH}`;
+    //this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/${API_PATH}`;
    }
 
   login(data: any): Observable<boolean> {

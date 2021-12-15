@@ -1,3 +1,7 @@
+/* COMP229 - Fall 2021 - - Sec 09
+Group - 13
+WEbExpert */
+
 let passport = require('passport');
 let flash = require('connect-flash');
 let bcrypt = require('bcrypt');

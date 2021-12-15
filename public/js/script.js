@@ -1,3 +1,7 @@
+/* COMP229 - Fall 2021 - - Sec 09
+Group - 13
+WEbExpert */
+
 function displayBlock(){
     const inputArr = document.querySelectorAll('#divChoices input');
     for(let i = 0; i < 10; i++){

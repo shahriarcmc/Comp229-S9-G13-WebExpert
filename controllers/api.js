@@ -1,3 +1,7 @@
+/* COMP229 - Fall 2021 - - Sec 09
+Group - 13
+WEbExpert */
+
 
 // create a reference to the model
 let Survey = require('../models/mc_survey');
@@ -180,14 +184,6 @@ module.exports.performDeleteQuestion = (req, res, next) => {
     console.log(req.body.questions);
     console.log(req.body.choices);
 
-    // update = { "$set": {} };
-    // update["$set"]["Questions"]["$concatArrays"] = [{"$slice": ["$Questions", idx]}, {"$slice": ["$Questions", {"$add": [1, idx]}]}];
-    // update["$set"]["Choices"]["$concatArrays"] = [{"$slice": ["$Choices", idx]}, {"$slice": ["$Choices", {"$add": [1, idx]}]}];
-
-    // update = { "$set": {} };
-    // update["$set"]["Questions"] = req.body.Questions;
-    // update["$set"]["Choices"] = req.body.Choices;
-    // Delete a question matched with the id from DB
     Survey.update({_id: id}, {
             $set: { Questions: req.body.questions,
                      Choices: req.body.choices }

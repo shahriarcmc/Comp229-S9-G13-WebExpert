@@ -1,3 +1,7 @@
+/* COMP229 - Fall 2021 - - Sec 09
+Group - 13
+WEbExpert */
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';

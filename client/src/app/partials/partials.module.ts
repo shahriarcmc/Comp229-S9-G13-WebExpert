@@ -1,3 +1,6 @@
+// <!-- COMP229 - Fall 2021 - - Sec 09
+// Group - 13
+// WEbExpert -->
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';

@@ -1,42 +1,38 @@
-        <!-- <div class="col-md-11"> -->
-            
-            <div class="table-responsive">
-            <br>
-            <table class="table table-bordered table-striped table-hover">
-                <!-- <table class="table table-bordered table-hover"></table> -->
-                <!-- Header Row-->
-                <tr>
-                    <th class="text-center col-8">Title</th>
-                    <!-- <th class="text-center col-2">Questions</th>
-                    <th class="text-center col-4">Choices</th> -->
-                    <th class="text-center col-2" colspan="2">Actions</th>
-                </tr>
+<!-- COMP229 - Fall 2021 - - Sec 09
+Group - 13
+WEbExpert -->
 
-                <!-- Repeatable Template Row -->
+<div class="table-responsive">
+    <br>
+    <table class="table table-bordered table-striped table-hover">
 
-                <% for(let i = 0; i < surveys.length; i++) { %>
-                    <tr>
-                        
-                        <td class="text-center"><a href="/surveys/survey/<%= surveys[i]._id %>">
-                            <%= surveys[i].Title %>
-                        </a></td>
-                        <!-- <td class="text-center col-2"><%= surveys[i].Questions %></td>
-                        <td class="text-center col-4"><%= surveys[i].Choices %></td> -->
-                        <td class="text-center col-1 bg-success">
-                            <a href="/surveys/edit/<%= surveys[i]._id %>" class="btn btn-outline-primary btn-sm">
-                            <i class="fas fa-pencil-alt"></i> Edit</a>
-                        </td>
-                        <td class="text-center col-1 bg-danger">
-                            <a href="/surveys/delete/<%= surveys[i]._id %>" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are you sure?')">
-                            <i class="fas fa-trash-alt"></i> Delete</a>
-                        </td>
-                        <!-- <td class="text-center col-1">
-                            <a href="/surveys/addquestion/<%= surveys[i]._id %>" class="btn btn-primary align-self-end" role="button">
-                            <i class="fas fa-plus-circle"></i> Questions</a>              
-                        </td> -->
-                    </tr>
-                <% } %>
-            </table>
-        </div>
+        <!-- Header-->
+        <tr>
+            <th class="text-center col-8">Title</th>
 
-        
+            <th class="text-center col-2" colspan="2">Actions</th>
+        </tr>
+
+        <!-- Repeatable Survey Row -->
+
+        <% for(let i=0; i < surveys.length; i++) { %>
+            <tr>
+
+                <td class="text-center"><a href="/surveys/survey/<%= surveys[i]._id %>">
+                        <%= surveys[i].Title %>
+                    </a></td>
+
+                <td class="text-center col-1 bg-success">
+                    <a href="/surveys/edit/<%= surveys[i]._id %>" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-pencil-alt"></i> Edit</a>
+                </td>
+                <td class="text-center col-1 bg-danger">
+                    <a href="/surveys/delete/<%= surveys[i]._id %>" class="btn btn-outline-danger btn-sm"
+                        onclick="return confirm('Are you sure?')">
+                        <i class="fas fa-trash-alt"></i> Delete</a>
+                </td>
+
+            </tr>
+            <% } %>
+    </table>
+</div>

@@ -1,4 +1,6 @@
-
+/* COMP229 - Fall 2021 - - Sec 09
+Group - 13
+WEbExpert */
 
 // // create a reference to the model
 // let Survey = require('../models/mc_survey');
