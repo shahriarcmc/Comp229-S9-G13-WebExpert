@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Response } from '../models/response.model';
 import { map } from "rxjs/operators";
 
-const PROTOCOL = "http";
+const PROTOCOL = "https";
 const PORT = 5000;
 const API_PATH = "users";
 
@@ -20,7 +20,9 @@ export class AuthService {
   private _redirectUrl: string | undefined;
 
   constructor(private http: HttpClient) {
-      this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/${API_PATH}`;
+    this.baseUrl = `https://comp229-sec9-group13-webexpert.herokuapp.com/${API_PATH}`;
+    // this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/${API_PATH}`;
+    // this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/${API_PATH}`;
    }
 
   login(data: any): Observable<boolean> {
