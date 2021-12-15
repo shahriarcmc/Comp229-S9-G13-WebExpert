@@ -13,7 +13,7 @@ import { EditSurveyComponent } from './surveys/edit/edit-survey.component';
 import { EditTitleComponent } from './surveys/edit/edit-title.component';
 import { EditQuestionComponent } from './surveys/edit/edit-question.component';
 import { DeleteComponent } from './surveys/delete/delete.component';
-
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { DeleteComponent } from './surveys/delete/delete.component';
         BrowserModule,
         FormsModule,
         RouterModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatRadioModule
     ],
     declarations: [
         HomeComponent,
