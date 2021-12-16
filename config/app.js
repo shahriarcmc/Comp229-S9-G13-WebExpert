@@ -68,7 +68,8 @@ app.use(express.static(path.join(__dirname, '../node_modules')));
 app.use(express.static(path.join(__dirname, '../scripts')));
 
 var corsOptions = {
-  origin: "http://localhost:4200"
+  origin: "https://comp229-sec9-group13-webexpert.herokuapp.com/"
+ // origin: "http://localhost:4200, https://comp229-sec9-group13-webexpert.herokuapp.com"
 };
 app.use(cors(corsOptions));
 
