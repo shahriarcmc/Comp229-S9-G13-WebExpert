@@ -56,7 +56,7 @@ var app = express();
 // app.set('view engine', 'ejs');
 
 // static path for Angular files
-app.use(express.static(path.join(__dirname, '../client/static/')));
+// app.use(express.static(path.join(__dirname, '../client/static/')));
 app.use('/images', express.static(__dirname + '/Images'));
 
 app.use(logger('dev'));
@@ -67,12 +67,14 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 app.use(express.static(path.join(__dirname, '../scripts')));
 
+// var corsOptions = {
+//   origin: "http://localhost:4200,http://localhost:8080,https://shahriarfrontend.herokuapp.com"
+// };
 var corsOptions = {
-  //origin: "https://comp229-sec9-group13-webexpert.herokuapp.com/"
- // origin: "http://localhost:4200,https://shahriarbackend.herokuapp.com"
- origin: ["http://localhost:4200","http://localhost:8080", "https://comp229-group13-frontend.herokuapp.com"]
-};
-app.use(cors(corsOptions));
+  origin: ["http://localhost:4200", "http://localhost:8080", "https://shahriarfrontend.herokuapp.com"],
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+app.use('*', cors(corsOptions));
 
 //setup express session
 // app.use(session({
@@ -90,9 +92,9 @@ app.use(passport.initialize());
 // app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/surveys', surveyRouter);
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/static/index.html'));
-});
+// app.get('/*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../client/static/index.html'));
+// });
 
 
 app.use(errorHandler);
