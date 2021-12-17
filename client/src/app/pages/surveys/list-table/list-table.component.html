@@ -1,0 +1,39 @@
+<br />
+<div class="container">
+    <h4>Available Surveys</h4>
+    <div class="list row">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+
+                <tr>
+                    <th class="text-center col-10">Title</th>
+                    <th class="text-center col-2" colspan="2">Actions</th>
+                </tr>
+                <!-- <tr class="table">
+                    <th class="text-center col-8">Title</th>
+                    <th class="text-center col-2" colspan="2">Actions</th>
+                </tr> -->
+
+                <tr  *ngFor="let survey of surveys">
+
+                    <td class="text-center">
+                        <a routerLink="/surveys/details/{{ survey._id }}">
+                            {{ survey.Title }}
+                        </a>
+                    </td>
+                    <td class="text-center col-1 bg-success">
+                        <a routerLink="/surveys/edit/view/{{ survey._id }}" class="btn btn-success btn-sm">
+                            <i class="fas fa-pencil-alt"></i> Edit
+                        </a>
+                    </td>
+                    <td class="text-center col-1 bg-danger">
+                        <a routerLink="/surveys/delete/{{ survey._id }}" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
