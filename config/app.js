@@ -71,7 +71,7 @@ app.use(express.static(path.join(__dirname, '../scripts')));
 //   origin: "http://localhost:4200,http://localhost:8080,https://shahriarfrontend.herokuapp.com"
 // };
 var corsOptions = {
-  origin: ["http://localhost:4200", "http://localhost:8080", "https://shahriarfrontend.herokuapp.com"],
+  origin: ["http://localhost:4200", "http://localhost:8080", "https://comp229-group13-frontend.herokuapp.com"],
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 app.use('*', cors(corsOptions));
